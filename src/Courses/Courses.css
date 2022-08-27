@@ -1,0 +1,14 @@
+.lighter{
+    background-color: #EEE2DC;
+    border-radius: 30px;
+}
+.lighter > .row {
+    padding-bottom: 15px;
+}
+.page-link.item-active {
+    background-color: #AC3B61 !important;
+}
+.page-link {
+    background-color: #BAB2B5 !important  ;
+    color: #EEE2DC !important;
+}

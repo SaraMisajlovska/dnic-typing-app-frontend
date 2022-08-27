@@ -1,0 +1,18 @@
+hr {
+    padding-top: 10px;
+}
+img{
+    width:400px;
+    height: 200px;
+}
+.btn.btn-primary{
+    background-color: #AC3B61 !important;
+    border: 1px solid #BAB2B5;
+    color: #EEE2DC !important;
+}
+.btn.btn-primary:hover{
+    background-color: #123C69 !important;
+    border: 1px solid #BAB2B5;
+    color: #EEE2DC !important;
+}
+
