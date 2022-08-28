@@ -1,4 +1,5 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 import stats from './stats.png'
 import stats2 from './stats2.png'
 
@@ -21,9 +22,12 @@ const Home = (props) => {
                         <div className="card-body">
                             <h4 className="card-title">{props.selectedCourse.courseName}</h4>
                             <p className="card-text">{props.selectedCourse.description}</p>
-                            <button className='btn btn-primary'>
-                                Resume &raquo;
-                            </button>
+                            <Link className='btn btn-primary'
+                                onClick={() => {
+                                }}
+                                to={`/lesson`}
+                            > Resume &raquo;
+                            </Link>
                         </div>
                     </div>
                 </div>

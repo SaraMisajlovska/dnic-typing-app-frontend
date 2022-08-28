@@ -6,6 +6,7 @@ import Courses from './Courses/Courses';
 import Footer from './Footer/footer';
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
+import Lesson from './Lesson/Lesson';
 import CoursesService from './Service/coursesService';
 
 class App extends Component {
@@ -15,7 +16,8 @@ class App extends Component {
         this.state = {
             courses: [],
             selectedCourse: {},
-            currentUser: {}
+            currentUser: {},
+            lesson:{}
         }
     }
     componentDidMount() {
@@ -35,8 +37,11 @@ class App extends Component {
       CoursesService.fetchCourse("1")
         .then((response) => {
           this.setState({
-            selectedCourse: response.data
+            selectedCourse: response.data,
+            lesson: response.data.lessons[0]
+           
           })
+          console.log(response.data.lessons[0])
         });
     }
     getUser = () => {
@@ -46,6 +51,9 @@ class App extends Component {
             currentUser: response.data
           })
         });
+    }
+    openLesson = {
+
     }
     render() {
 
@@ -88,12 +96,17 @@ class App extends Component {
                     />*/}
                     <Route path={"/home"}
                         element={
-                           <Home selectedCourse = {this.state.selectedCourse} />
+                           <Home selectedCourse = {this.state.selectedCourse}/>
                         }
                     /> 
                     <Route path={"/profile"}
                         element={
                            <Profile selectedCourse = {this.state.currentUser}/>
+                        }
+                    /> 
+                     <Route path={"/lesson"}
+                        element={
+                           <Lesson lesson={this.state.lesson} />
                         }
                     /> 
                     <Route path={"/"}
