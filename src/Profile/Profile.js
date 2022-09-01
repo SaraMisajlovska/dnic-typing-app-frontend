@@ -1,22 +1,25 @@
 
 const Profile = (props) => {
-    return (
+    return ( 
         <div class="container">
-            {/* <div class="row">
-                <div class="col-sm-3">
-                    <img src={props.currentUser.profilePhoto} />
+            <div className="row">
+                <div className="col-1"></div>
+                <div className="col-7">
+                    <h2>Edit your personal information</h2>
                 </div>
-                <div class="col-sm-3">
-                    <label labelId="firstName" class="form-label"></label>
-                    <input type="text" id={labelId} placeholder="First Name" class="form-control" />
-                </div>
-                <div class="col-sm-3">
-                    <label labelId="lastName" class="form-label"></label>
-                    <input type="text" id={labelId} placeholder="Last Name" class="form-control" />
-                </div>
-                <div class="col"></div>
+                <div className="col-4"></div>
             </div>
-             */}
+            <form>
+                <div className="row">
+                <div className="col-4">
+                <img src="props.user.imageUrl"> </img>
+                </div> 
+                <div className="col-8">
+
+                </div>
+                </div>
+
+            </form>
         </div>
     )
 }

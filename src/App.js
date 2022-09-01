@@ -101,7 +101,7 @@ class App extends Component {
                     /> 
                     <Route path={"/profile"}
                         element={
-                           <Profile selectedCourse = {this.state.currentUser}/>
+                           <Profile user = {this.state.currentUser}/>
                         }
                     /> 
                      <Route path={"/lesson"}
