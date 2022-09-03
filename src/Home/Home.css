@@ -1,8 +1,9 @@
-.course {
-    width:400px;
-    height: 250px;
+img .course {
+    width:400px ;
+    height: 250px ;
+
 }
-.stats {
+img .stats {
     width:400px;
-    height: 200px;
+    height: 200px !important;
 }

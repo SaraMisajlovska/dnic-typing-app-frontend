@@ -32,7 +32,7 @@ const Lesson = (props) => {
                 <div className='col-4'></div>
                 <div className='col-5'>
 
-                    <img src={imageSrc} alt="Typing" />
+                    <img className='lesson' src={imageSrc} alt="Typing" />
                 </div>
                 <div className='col-3'></div>
             </div>

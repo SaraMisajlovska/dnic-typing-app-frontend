@@ -7,6 +7,7 @@ import Footer from './Footer/footer';
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
 import Lesson from './Lesson/Lesson';
+import FAQs from './FAQs/FAQs';
 import CoursesService from './Service/coursesService';
 
 class App extends Component {
@@ -17,12 +18,14 @@ class App extends Component {
             courses: [],
             selectedCourse: {},
             currentUser: {},
-            lesson:{}
+            lesson:{},
+            loggedIn: true
         }
     }
     componentDidMount() {
         this.loadCourses();
         this.getCourse();
+        this.getUser();
     }
     loadCourses = () => {
         CoursesService.fetchCourses()
@@ -49,11 +52,14 @@ class App extends Component {
         .then((response) => {
           this.setState({
             currentUser: response.data
-          })
+        })
         });
     }
-    openLesson = {
-
+    editUser = (username, name, surname, city, country, email) => {
+        CoursesService.saveUser(username, name, surname, city, country, email)
+            .then(() => {
+                this.getUser();
+            });
     }
     render() {
 
@@ -95,20 +101,27 @@ class App extends Component {
                         />}
                     />*/}
                     <Route path={"/home"}
+                    
                         element={
                            <Home selectedCourse = {this.state.selectedCourse}/>
                         }
                     /> 
                     <Route path={"/profile"}
                         element={
-                           <Profile user = {this.state.currentUser}/>
+                           <Profile user = {this.state.currentUser}
+                                    onEditUser = {this.editUser}/>
                         }
                     /> 
                      <Route path={"/lesson"}
                         element={
                            <Lesson lesson={this.state.lesson} />
                         }
-                    /> 
+                    />  
+                    <Route path={"/faqs"}
+                       element={
+                          <FAQs/>
+                       }
+                   /> 
                     <Route path={"/"}
                         element={
                             <Navigate to={"/home"}/>

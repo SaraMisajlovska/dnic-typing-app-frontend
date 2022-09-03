@@ -11,7 +11,7 @@ const Course = (props) => {
             <div className="col-sm-1">
                 </div>
                 <div className="col-sm-5">
-                    <img src={props.course.imageUrl} alt="courseImage"/>
+                    <img className="course" src={props.course.imageUrl} alt="courseImage"/>
                 </div>
                 <div className="col-sm-5">
                     <h6>{props.course.level}</h6>
