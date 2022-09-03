@@ -9,7 +9,7 @@ import Profile from './Profile/Profile';
 import Lesson from './Lesson/Lesson';
 import FAQs from './FAQs/FAQs';
 import CoursesService from './Service/coursesService';
-
+import Login from './Login/Login';
 class App extends Component {
 
     constructor(props) {
@@ -18,8 +18,7 @@ class App extends Component {
             courses: [],
             selectedCourse: {},
             currentUser: {},
-            lesson:{},
-            loggedIn: true
+            lesson:{}           
         }
     }
     componentDidMount() {
@@ -120,6 +119,11 @@ class App extends Component {
                     <Route path={"/faqs"}
                        element={
                           <FAQs/>
+                       }
+                   /> 
+                   <Route path={"/logout"}
+                       element={
+                          <Login/>
                        }
                    /> 
                     <Route path={"/"}

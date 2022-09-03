@@ -29,11 +29,11 @@ const header = (props) => {
                             </li>
 
                             <li className="nav-item active">
-                                <Link className="nav-link" to={"/logout"}>Log out</Link>
-                            </li>
-
-                            <li className="nav-item active">
                                 <Link className="nav-link" to={"/faqs"}>FAQs</Link>
+                            </li>
+                            
+                            <li className="nav-item active">
+                                <Link className="nav-link" to={"/logout"}>Log out</Link>
                             </li>
                         </ul>
                     </div>

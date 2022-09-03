@@ -1,5 +1,5 @@
 .small{
-    font-size: 1px;
+    font-size: 1px !important;
 }
 img.guy{
     width: 412px;

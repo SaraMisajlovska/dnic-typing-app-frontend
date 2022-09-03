@@ -33,8 +33,11 @@ const faqs = () => {
                 <div className='col-1'></div>
                 < div className="col-5">
                     <img src={confused} alt="" className='guy' />
-                    <div className='small'> Icons made by <a href="https://www.freepik.com" title="Freepik">
-                        Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+                    <div className='small'>
+                         Icons made by <a href="https://www.freepik.com" title="Freepik">
+                        Freepik </a> 
+                        from 
+                        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
                     </div>
                 </div>
 
