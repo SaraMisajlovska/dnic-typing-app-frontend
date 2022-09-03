@@ -140,7 +140,10 @@ const Profile = (props) => {
                         </div>
                         <div className="row pb-2">
                             <div className='col'>
-                                <button id='submit' type='submit' className='btn btn-primary float-end'>Save</button>
+                                <button id='submit' 
+                                type='submit' className='btn btn-primary float-end'
+                                onClick={() => { alert('Changes saved succesfully!')}}
+                                >Save</button>
                             </div>
                         </div>
 
